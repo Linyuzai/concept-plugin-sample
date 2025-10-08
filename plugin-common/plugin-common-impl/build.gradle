@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.github.linyuzai'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(path: ':plugin-common:plugin-common-api', configuration: 'default')
+    implementation project(path: ':plugin-common:plugin-common-dependency', configuration: 'default')
+}

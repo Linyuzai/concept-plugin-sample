@@ -1,0 +1,10 @@
+concept:
+  plugin:
+    storage:
+      type: local
+      location: data
+      filter-suffixes: .zip,.jar
+    management:
+      header:
+        title:
+          text: 本地插件

@@ -1,0 +1,8 @@
+concept:
+  plugin:
+    storage:
+      type: minio
+    management:
+      header:
+        title:
+          text: 远程插件

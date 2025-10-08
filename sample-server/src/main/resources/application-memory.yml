@@ -1,0 +1,8 @@
+concept:
+  plugin:
+    storage:
+      type: memory
+    management:
+      header:
+        title:
+          text: 内存插件

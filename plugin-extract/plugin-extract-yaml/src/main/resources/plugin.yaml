@@ -1,0 +1,4 @@
+concept:
+  plugin:
+    dependency:
+      names: extract-api

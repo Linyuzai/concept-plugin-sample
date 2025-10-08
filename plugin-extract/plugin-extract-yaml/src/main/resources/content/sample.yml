@@ -1,0 +1,4 @@
+yml:
+  extract:
+    sample:
+      value: yml-extract-sample-value

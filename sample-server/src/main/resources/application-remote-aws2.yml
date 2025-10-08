@@ -1,0 +1,8 @@
+concept:
+  plugin:
+    storage:
+      type: aws_v2
+    management:
+      header:
+        title:
+          text: 远程插件

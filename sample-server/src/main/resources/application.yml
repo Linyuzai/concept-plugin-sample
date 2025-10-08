@@ -1,0 +1,37 @@
+server:
+  port: 8800
+spring:
+  profiles:
+    active: memory
+  application:
+    name: concept-plugin-sample
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+concept:
+  plugin:
+    metadata:
+      standard-type: com.github.linyuzai.plugin.jar.concept.JarPlugin.StandardMetadata
+    autoload:
+      enabled: true
+      period: 5000
+    storage:
+      type: memory
+      filter-suffixes: .zip,.jar
+    extension:
+      request-mapping:
+        enabled: true
+    management:
+      enabled: true
+      authorization:
+        password: 123456
+      github-corner:
+        display: true
+      header:
+        display: true
+        title:
+          display: true
+          text: "插件管理"
+      footer:
+        display: true
