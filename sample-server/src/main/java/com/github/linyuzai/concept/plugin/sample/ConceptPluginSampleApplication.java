@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnablePluginConcept
-@SpringBootApplication(scanBasePackages = Packages.CYCLE)
+@SpringBootApplication(scanBasePackages = Packages.COMMON)
 public class ConceptPluginSampleApplication {
 
     public static void main(String[] args) {
