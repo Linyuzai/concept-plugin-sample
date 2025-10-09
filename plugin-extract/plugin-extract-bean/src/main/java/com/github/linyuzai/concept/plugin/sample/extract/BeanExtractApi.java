@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 @Component
 public class BeanExtractApi implements ExtractApi, InitializingBean, DisposableBean, EnvironmentAware {
@@ -19,7 +23,12 @@ public class BeanExtractApi implements ExtractApi, InitializingBean, DisposableB
 
     @Override
     public void exec() {
-        System.out.println("exec by bean extract api with application context: " + applicationContext);
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream("text.txt")) {
+            System.out.println("exec by bean extract api with application context: " + applicationContext +
+                    ", read resources: '" + inputStreamToString(is) + "'");
+        } catch (Throwable e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @PostConstruct
@@ -46,4 +55,16 @@ public class BeanExtractApi implements ExtractApi, InitializingBean, DisposableB
     public void setEnvironment(Environment environment) {
         System.out.println("EnvironmentAware: " + environment);
     }
+
+    public static String inputStreamToString(InputStream inputStream) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        StringBuilder stringBuilder = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            stringBuilder.append(line);
+        }
+        reader.close();
+        return stringBuilder.toString();
+    }
+
 }

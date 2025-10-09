@@ -27,12 +27,13 @@ public class ConceptPluginSampleApplication {
 
 > 基础依赖插件
 
-plugin-common-impl依赖的plugin-common-dependency不在启动服务中
+`plugin-common-impl`依赖的`plugin-common-dependency`不在启动服务中
 
-可以将plugin-common-dependency作为一个被依赖的基础插件进行加载，
-并指定plugin-common-impl依赖plugin-common-dependency
+可以将`plugin-common-dependency`作为一个被依赖的基础插件进行加载，
+并指定`plugin-common-impl`依赖`plugin-common-dependency`
 
-在plugin-common-dependency的plugin.properties中设置
+在`plugin-common-dependency`的`plugin.properties`中设置
+
 ```properties
 #定义插件名称
 concept.plugin.name=common-dependency
@@ -40,7 +41,8 @@ concept.plugin.name=common-dependency
 concept.plugin.handler.enabled=false
 ```
 
-在plugin-common-impl的plugin.properties中设置
+在`plugin-common-impl`的`plugin.properties`中设置
+
 ```properties
 #依赖指定插件 多个用逗号隔开
 concept.plugin.dependency.names=common-dependency
@@ -49,6 +51,37 @@ concept.plugin.dependency.names=common-dependency
 
 > 嵌套依赖插件
 
-plugin-nested-impl依赖的plugin-nested-dependency不在启动服务中
+`plugin-nested-impl`依赖的`plugin-nested-dependency`不在启动服务中
 
-可以将plugin-nested-dependency直接打包进plugin-nested-impl中
+可以将`plugin-nested-dependency`直接打包进`plugin-nested-impl`中
+
+## plugin-cycle
+
+> 循环依赖校验
+
+`plugin-cycle1`的`plugin.properties`配置
+
+```properties
+# cycle1 依赖 cycle2
+concept.plugin.name=cycle1
+concept.plugin.dependency.names=cycle2
+```
+
+`plugin-cycle2`的`plugin.properties`配置
+
+```properties
+# cycle2 依赖 cycle1
+concept.plugin.name=cycle1
+concept.plugin.dependency.names=cycle2
+```
+
+## plugin-extract-bean
+
+> 提取Bean
+
+支持Spring注入功能
+
+无法注入其他插件包中的类
+
+插件对象不会注入到Spring容器
+

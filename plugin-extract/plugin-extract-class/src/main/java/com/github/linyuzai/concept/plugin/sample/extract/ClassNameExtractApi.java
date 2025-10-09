@@ -4,6 +4,6 @@ public class ClassNameExtractApi implements ExtractApi {
 
     @Override
     public void exec() {
-
+        System.out.println("exec by class name extract api");
     }
 }

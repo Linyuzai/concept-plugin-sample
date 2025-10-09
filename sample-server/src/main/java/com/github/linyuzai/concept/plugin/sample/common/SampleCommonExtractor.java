@@ -1,14 +1,14 @@
-package com.github.linyuzai.concept.plugin.sample.nested;
+package com.github.linyuzai.concept.plugin.sample.common;
 
 import com.github.linyuzai.plugin.autoconfigure.bean.BeanExtractor;
 import com.github.linyuzai.plugin.core.context.PluginContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class NestedExtractor extends BeanExtractor<NestedApi> {
+public class SampleCommonExtractor extends BeanExtractor<CommonApi> {
 
     @Override
-    public void onExtract(NestedApi plugin, PluginContext context) {
+    public void onExtract(CommonApi plugin, PluginContext context) {
         plugin.exec();
     }
 }
