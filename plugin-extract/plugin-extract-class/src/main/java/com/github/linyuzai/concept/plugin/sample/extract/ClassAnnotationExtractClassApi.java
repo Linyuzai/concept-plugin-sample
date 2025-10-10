@@ -5,6 +5,6 @@ public class ClassAnnotationExtractClassApi implements ExtractClassApi {
 
     @Override
     public void exec() {
-        System.out.println("exec by class annotation extract api");
+        System.out.println("exec by class annotation extract class api");
     }
 }
