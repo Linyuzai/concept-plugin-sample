@@ -2,7 +2,7 @@ package com.github.linyuzai.concept.plugin.sample.extract;
 
 import java.util.AbstractList;
 
-public class ClassExtractApi extends AbstractList<Object> implements ExtractApi {
+public class ClassExtractClassApi extends AbstractList<Object> implements ExtractClassApi {
 
     @Override
     public void exec() {

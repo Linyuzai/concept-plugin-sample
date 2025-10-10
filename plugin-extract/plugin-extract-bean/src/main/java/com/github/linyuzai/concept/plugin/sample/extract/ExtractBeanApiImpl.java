@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 @Component
-public class BeanExtractApi implements ExtractApi, InitializingBean, DisposableBean, EnvironmentAware {
+public class ExtractBeanApiImpl implements ExtractBeanApi, InitializingBean, DisposableBean, EnvironmentAware {
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -24,7 +24,7 @@ public class BeanExtractApi implements ExtractApi, InitializingBean, DisposableB
     @Override
     public void exec() {
         try (InputStream is = getClass().getClassLoader().getResourceAsStream("text.txt")) {
-            System.out.println("exec by bean extract api with application context: " + applicationContext +
+            System.out.println("exec by extract bean api impl with application context: " + applicationContext +
                     ", read resources: '" + inputStreamToString(is) + "'");
         } catch (Throwable e) {
             throw new RuntimeException(e);

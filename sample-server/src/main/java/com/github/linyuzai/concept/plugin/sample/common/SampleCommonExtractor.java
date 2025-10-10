@@ -1,14 +1,17 @@
 package com.github.linyuzai.concept.plugin.sample.common;
 
+import com.github.linyuzai.concept.plugin.sample.Utils;
 import com.github.linyuzai.plugin.autoconfigure.bean.BeanExtractor;
 import com.github.linyuzai.plugin.core.context.PluginContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class SampleCommonExtractor extends BeanExtractor<CommonApi> {
 
     @Override
     public void onExtract(CommonApi plugin, PluginContext context) {
-        plugin.exec();
+        Utils.usage(log, "common", plugin::exec);
     }
 }

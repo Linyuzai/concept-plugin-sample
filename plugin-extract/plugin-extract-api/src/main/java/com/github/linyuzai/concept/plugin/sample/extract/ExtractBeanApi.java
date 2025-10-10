@@ -1,6 +1,6 @@
 package com.github.linyuzai.concept.plugin.sample.extract;
 
-public interface ExtractApi {
+public interface ExtractBeanApi {
 
     void exec();
 }

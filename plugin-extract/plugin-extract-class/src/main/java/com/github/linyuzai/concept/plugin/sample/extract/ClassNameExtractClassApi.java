@@ -1,6 +1,6 @@
 package com.github.linyuzai.concept.plugin.sample.extract;
 
-public class ClassNameExtractApi implements ExtractApi {
+public class ClassNameExtractClassApi implements ExtractClassApi {
 
     @Override
     public void exec() {

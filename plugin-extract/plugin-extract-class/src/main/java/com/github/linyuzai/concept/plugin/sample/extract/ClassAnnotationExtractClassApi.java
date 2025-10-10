@@ -1,7 +1,7 @@
 package com.github.linyuzai.concept.plugin.sample.extract;
 
 @ExtractAnnotation
-public class ClassAnnotationExtractApi implements ExtractApi {
+public class ClassAnnotationExtractClassApi implements ExtractClassApi {
 
     @Override
     public void exec() {

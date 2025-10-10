@@ -1,18 +1,21 @@
 package com.github.linyuzai.concept.plugin.sample.extract.bean;
 
-import com.github.linyuzai.concept.plugin.sample.extract.ExtractApi;
+import com.github.linyuzai.concept.plugin.sample.Utils;
+import com.github.linyuzai.concept.plugin.sample.extract.ExtractBeanApi;
 import com.github.linyuzai.plugin.autoconfigure.bean.BeanExtractor;
 import com.github.linyuzai.plugin.core.context.PluginContext;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
-import java.util.List;
 
-//@Component
-public class SampleBeanArrayExtractor extends BeanExtractor<ExtractApi[]> {
+@Slf4j
+@Component
+public class SampleBeanArrayExtractor extends BeanExtractor<ExtractBeanApi[]> {
 
     @Override
-    public void onExtract(ExtractApi[] plugin,
+    public void onExtract(ExtractBeanApi[] plugin,
                           PluginContext context) {
-        Arrays.stream(plugin).forEach(ExtractApi::exec);
+        Utils.usage(log, "bean array", () -> Arrays.stream(plugin).forEach(ExtractBeanApi::exec));
     }
 }
