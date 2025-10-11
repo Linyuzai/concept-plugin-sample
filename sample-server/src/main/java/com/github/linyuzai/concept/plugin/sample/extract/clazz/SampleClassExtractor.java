@@ -1,13 +1,20 @@
 package com.github.linyuzai.concept.plugin.sample.extract.clazz;
 
+import com.github.linyuzai.concept.plugin.sample.Utils;
 import com.github.linyuzai.concept.plugin.sample.extract.ExtractClassApi;
 import com.github.linyuzai.plugin.core.context.PluginContext;
 import com.github.linyuzai.plugin.jar.handle.extract.ClassExtractor;
+import com.github.linyuzai.plugin.jar.handle.extract.match.PluginClassName;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
-public class SampleClassExtractor extends ClassExtractor<ExtractClassApi> {
+@Slf4j
+@Component
+public class SampleClassExtractor extends ClassExtractor<Class<? extends ExtractClassApi>> {
 
     @Override
-    public void onExtract(ExtractClassApi plugin, PluginContext context) {
-
+    public void onExtract(@PluginClassName("com.github.linyuzai.concept.plugin.sample.extract.ClassNameExtractClassApi")
+                          Class<? extends ExtractClassApi> plugin, PluginContext context) {
+        Utils.usage(log, "class entry", () -> System.out.println(plugin.getName()));
     }
 }

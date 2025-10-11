@@ -17,7 +17,7 @@ public class SampleBeanMapExtractor extends BeanExtractor<Map<String, ? extends 
     public void onExtract(Map<String, ? extends ExtractBeanApi> plugin,
                           PluginContext context) {
         Utils.usage(log, "bean map", () -> {
-            log.info(plugin.toString());
+            System.out.println(plugin.toString());
             plugin.values().forEach(ExtractBeanApi::exec);
         });
     }

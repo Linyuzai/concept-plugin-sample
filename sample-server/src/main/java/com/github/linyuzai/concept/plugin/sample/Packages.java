@@ -9,4 +9,6 @@ public class Packages {
     public static final String NESTED = BASE + "nested";
 
     public static final String EXTRACT_BEAN = BASE + "extract.bean";
+
+    public static final String EXTRACT_CLASS = BASE + "extract.clazz";
 }
