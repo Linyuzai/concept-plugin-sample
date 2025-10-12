@@ -1,4 +1,6 @@
 concept:
   plugin:
-    dependency:
-      names:
+    name: extract-yaml
+custom:
+  a: 1
+  b: 2

@@ -15,4 +15,6 @@ public class Packages {
     public static final String EXTRACT_CONTENT = BASE + "extract.content";
 
     public static final String EXTRACT_PROPERTIES = BASE + "extract.properties";
+
+    public static final String EXTRACT_YAML = BASE + "extract.yaml";
 }
