@@ -17,4 +17,6 @@ public class Packages {
     public static final String EXTRACT_PROPERTIES = BASE + "extract.properties";
 
     public static final String EXTRACT_YAML = BASE + "extract.yaml";
+
+    public static final String OBSERVABLE = BASE + "observable";
 }

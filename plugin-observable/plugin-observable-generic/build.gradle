@@ -10,4 +10,5 @@ repositories {
 }
 
 dependencies {
+    implementation project(path: ':plugin-observable:plugin-observable-api', configuration: 'default')
 }
