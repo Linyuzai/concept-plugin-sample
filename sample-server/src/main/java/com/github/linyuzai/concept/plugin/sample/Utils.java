@@ -6,7 +6,7 @@ public class Utils {
 
     private static final int length = 100;
 
-    public static void usage(Logger logger, String message, Runnable runnable) {
+    public static void wrap(Logger logger, String message, Runnable runnable) {
         logger.info(stringBuilder(message, "start").toString());
         runnable.run();
         logger.info(stringBuilder(message, "end").append('\n').toString());

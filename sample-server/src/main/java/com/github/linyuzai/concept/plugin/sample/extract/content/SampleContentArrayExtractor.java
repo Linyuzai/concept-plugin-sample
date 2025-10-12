@@ -16,7 +16,7 @@ public class SampleContentArrayExtractor extends ContentExtractor<byte[][]> {
     @PluginEntry("content/**")
     @Override
     public void onExtract(byte[][] plugin, PluginContext context) {
-        Utils.usage(log, "content array", () ->
+        Utils.wrap(log, "content array", () ->
                 System.out.println(Arrays.toString(Arrays.stream(plugin).map(String::new).toArray(String[]::new))));
     }
 }

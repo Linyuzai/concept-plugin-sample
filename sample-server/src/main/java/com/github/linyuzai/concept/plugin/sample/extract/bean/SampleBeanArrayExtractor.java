@@ -16,6 +16,6 @@ public class SampleBeanArrayExtractor extends BeanExtractor<ExtractBeanApi[]> {
     @Override
     public void onExtract(ExtractBeanApi[] plugin,
                           PluginContext context) {
-        Utils.usage(log, "bean array", () -> Arrays.stream(plugin).forEach(ExtractBeanApi::exec));
+        Utils.wrap(log, "bean array", () -> Arrays.stream(plugin).forEach(ExtractBeanApi::exec));
     }
 }

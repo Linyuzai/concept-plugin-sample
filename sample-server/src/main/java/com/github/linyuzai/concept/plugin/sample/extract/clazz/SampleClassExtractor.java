@@ -15,6 +15,6 @@ public class SampleClassExtractor extends ClassExtractor<Class<? extends Extract
     @Override
     public void onExtract(@PluginClassName("com.github.linyuzai.concept.plugin.sample.extract.ClassNameExtractClassApi")
                           Class<? extends ExtractClassApi> plugin, PluginContext context) {
-        Utils.usage(log, "class entry", () -> System.out.println(plugin.getName()));
+        Utils.wrap(log, "class entry", () -> System.out.println(plugin.getName()));
     }
 }

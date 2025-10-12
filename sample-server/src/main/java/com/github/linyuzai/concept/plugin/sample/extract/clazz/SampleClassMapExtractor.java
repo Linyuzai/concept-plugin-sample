@@ -15,6 +15,6 @@ public class SampleClassMapExtractor extends ClassExtractor<Map<String, Class<? 
 
     @Override
     public void onExtract(Map<String, Class<? extends ExtractClassApi>> plugin, PluginContext context) {
-        Utils.usage(log, "class map", () -> System.out.println(plugin.toString()));
+        Utils.wrap(log, "class map", () -> System.out.println(plugin.toString()));
     }
 }

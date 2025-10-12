@@ -12,6 +12,6 @@ public class SampleNestedExtractor extends BeanExtractor<NestedApi> {
 
     @Override
     public void onExtract(NestedApi plugin, PluginContext context) {
-        Utils.usage(log, "nested", plugin::exec);
+        Utils.wrap(log, "nested", plugin::exec);
     }
 }

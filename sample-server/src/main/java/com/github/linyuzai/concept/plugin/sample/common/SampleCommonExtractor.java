@@ -12,6 +12,6 @@ public class SampleCommonExtractor extends BeanExtractor<CommonApi> {
 
     @Override
     public void onExtract(CommonApi plugin, PluginContext context) {
-        Utils.usage(log, "common", plugin::exec);
+        Utils.wrap(log, "common", plugin::exec);
     }
 }

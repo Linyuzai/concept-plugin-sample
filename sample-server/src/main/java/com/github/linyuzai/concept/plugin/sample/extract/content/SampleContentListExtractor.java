@@ -21,7 +21,7 @@ public class SampleContentListExtractor extends ContentExtractor<List<InputStrea
     @PluginEntry("content/**")
     @Override
     public void onExtract(List<InputStream> plugin, PluginContext context) {
-        Utils.usage(log, "content list", () -> System.out.println(plugin.stream()
+        Utils.wrap(log, "content list", () -> System.out.println(plugin.stream()
                 .map(this::inputStreamToString).collect(Collectors.toList())));
     }
 

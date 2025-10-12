@@ -18,7 +18,7 @@ public class SampleContentSetExtractor extends ContentExtractor<Set<ByteBuffer>>
     @PluginEntry("content/**")
     @Override
     public void onExtract(Set<ByteBuffer> plugin, PluginContext context) {
-        Utils.usage(log, "content set", () -> System.out.println(plugin.stream()
+        Utils.wrap(log, "content set", () -> System.out.println(plugin.stream()
                 .map(it -> new String(it.array())).collect(Collectors.toSet())));
     }
 }

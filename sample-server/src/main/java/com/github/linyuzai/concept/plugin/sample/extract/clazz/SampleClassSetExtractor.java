@@ -18,6 +18,6 @@ public class SampleClassSetExtractor extends ClassExtractor<Set<Class<? extends 
     @Override
     public void onExtract(@PluginClassAnnotation(ExtractAnnotation.class) Set<Class<? extends ExtractClassApi>> plugin,
                           PluginContext context) {
-        Utils.usage(log, "class set", () -> System.out.println(plugin));
+        Utils.wrap(log, "class set", () -> System.out.println(plugin));
     }
 }

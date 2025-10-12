@@ -13,6 +13,6 @@ public class SampleContentExtractor extends ContentExtractor<byte[]> {
 
     @Override
     public void onExtract(@PluginEntry("**/sample1.txt") byte[] plugin, PluginContext context) {
-        Utils.usage(log, "content entry", () -> System.out.println(new String(plugin)));
+        Utils.wrap(log, "content entry", () -> System.out.println(new String(plugin)));
     }
 }

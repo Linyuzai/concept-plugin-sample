@@ -15,6 +15,6 @@ public class SampleClassListExtractor extends ClassExtractor<List<Class<? extend
 
     @Override
     public void onExtract(List<Class<? extends ExtractClassApi>> plugin, PluginContext context) {
-        Utils.usage(log, "class list", () -> System.out.println(plugin));
+        Utils.wrap(log, "class list", () -> System.out.println(plugin));
     }
 }

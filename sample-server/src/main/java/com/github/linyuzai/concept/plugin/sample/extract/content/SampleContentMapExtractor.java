@@ -16,6 +16,6 @@ public class SampleContentMapExtractor extends ContentExtractor<Map<String, Stri
     @PluginEntry("content/**")
     @Override
     public void onExtract(Map<String, String> plugin, PluginContext context) {
-        Utils.usage(log, "content map", () -> System.out.println(plugin));
+        Utils.wrap(log, "content map", () -> System.out.println(plugin));
     }
 }

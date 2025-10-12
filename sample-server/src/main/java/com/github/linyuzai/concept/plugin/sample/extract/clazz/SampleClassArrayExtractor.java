@@ -18,6 +18,6 @@ public class SampleClassArrayExtractor extends ClassExtractor<Class<? extends Ex
     @Override
     public void onExtract(@PluginClass(AbstractList.class) Class<? extends ExtractClassApi>[] plugin,
                           PluginContext context) {
-        Utils.usage(log, "class array", () -> System.out.println(Arrays.toString(plugin)));
+        Utils.wrap(log, "class array", () -> System.out.println(Arrays.toString(plugin)));
     }
 }

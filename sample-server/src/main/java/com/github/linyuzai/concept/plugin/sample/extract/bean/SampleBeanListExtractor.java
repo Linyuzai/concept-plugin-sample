@@ -16,6 +16,6 @@ public class SampleBeanListExtractor extends BeanExtractor<List<? extends Extrac
     @Override
     public void onExtract(List<? extends ExtractBeanApi> plugin,
                           PluginContext context) {
-        Utils.usage(log, "bean list", () -> plugin.forEach(ExtractBeanApi::exec));
+        Utils.wrap(log, "bean list", () -> plugin.forEach(ExtractBeanApi::exec));
     }
 }
