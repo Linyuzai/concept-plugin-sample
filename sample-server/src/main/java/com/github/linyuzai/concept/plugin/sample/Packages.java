@@ -11,4 +11,6 @@ public class Packages {
     public static final String EXTRACT_BEAN = BASE + "extract.bean";
 
     public static final String EXTRACT_CLASS = BASE + "extract.clazz";
+
+    public static final String EXTRACT_CONTENT = BASE + "extract.content";
 }
