@@ -19,6 +19,9 @@ concept:
     storage:
       type: memory
       filter-suffixes: .zip,.jar
+    validation:
+      max-nested-depth: 5
+      max-read-size: 2MB
     extension:
       request-mapping:
         enabled: true

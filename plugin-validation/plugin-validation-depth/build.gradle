@@ -9,5 +9,12 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    from {
+        fileTree('lib')
+    }
+}
+
 dependencies {
+    implementation fileTree("lib")
 }
