@@ -4,3 +4,5 @@ concept:
 custom:
   a: 1
   b: 2
+app:
+  name: ${spring.application.name}
