@@ -4,7 +4,7 @@ public class DeekSeek implements AI {
 
     @Override
     public void ai() {
-        System.out.println("exec by deep seek");
+        System.out.println("exec by deepseek");
     }
 
     @Override

@@ -1,14 +1,14 @@
 package com.github.linyuzai.concept.plugin.sample.observable;
 
-public class OpenAI implements AI {
+public class ChatGPT implements AI {
 
     @Override
     public void ai() {
-        System.out.println("exec by open ai");
+        System.out.println("exec by chatgpt");
     }
 
     @Override
     public String getName() {
-        return "openai";
+        return "chatgpt";
     }
 }
