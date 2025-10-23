@@ -2,6 +2,7 @@ concept:
   plugin:
     storage:
       type: minio
+      location: concept-plugin-sample-minio
     management:
       header:
         title:
