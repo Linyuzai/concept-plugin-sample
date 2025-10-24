@@ -5,6 +5,12 @@ import io.minio.MinioClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
+
+import java.net.URI;
 
 @EnablePluginConcept
 @SpringBootApplication(scanBasePackages = Packages.OBSERVABLE)
@@ -24,4 +30,16 @@ public class ConceptPluginSampleApplication {
                 .credentials("minioadmin", "minioadmin")
                 .build();
     }
+
+    @Bean
+    public S3Client s3Client() {
+        return S3Client.builder()
+                .endpointOverride(URI.create(HOST))
+                .region(Region.US_EAST_1)
+                .credentialsProvider(StaticCredentialsProvider
+                        .create(AwsBasicCredentials.create("minioadmin", "minioadmin"))) // 设置凭证提供者
+                .forcePathStyle(true)
+                .build();
+    }
+
 }

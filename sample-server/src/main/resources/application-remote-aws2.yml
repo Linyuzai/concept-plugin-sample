@@ -2,7 +2,8 @@ concept:
   plugin:
     storage:
       type: aws_v2
+      location: concept-plugin-sample-aws2
     management:
       header:
         title:
-          text: 远程插件
+          text: 远程插件aws2
