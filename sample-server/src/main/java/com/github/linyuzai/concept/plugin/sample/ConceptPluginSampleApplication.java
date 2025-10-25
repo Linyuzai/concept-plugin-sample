@@ -1,5 +1,11 @@
 package com.github.linyuzai.concept.plugin.sample;
 
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.github.linyuzai.plugin.autoconfigure.EnablePluginConcept;
 import io.minio.MinioClient;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +23,7 @@ import java.net.URI;
 public class ConceptPluginSampleApplication {
 
     public static void main(String[] args) {
+        System.setProperty("aws.java.v1.disableDeprecationAnnouncement", "true");
         SpringApplication.run(ConceptPluginSampleApplication.class, args);
     }
 
@@ -39,6 +46,17 @@ public class ConceptPluginSampleApplication {
                 .credentialsProvider(StaticCredentialsProvider
                         .create(AwsBasicCredentials.create("minioadmin", "minioadmin"))) // 设置凭证提供者
                 .forcePathStyle(true)
+                .build();
+    }
+
+    @Bean
+    public AmazonS3 amazonS3() {
+        return AmazonS3ClientBuilder.standard()
+                .withCredentials(new AWSStaticCredentialsProvider(
+                        new BasicAWSCredentials("minioadmin", "minioadmin")))
+                .withEndpointConfiguration(new AwsClientBuilder
+                        .EndpointConfiguration(HOST, Regions.US_EAST_1.getName()))
+                .withPathStyleAccessEnabled(true)
                 .build();
     }
 

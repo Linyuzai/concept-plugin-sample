@@ -12,3 +12,13 @@ repositories {
 dependencies {
 
 }
+
+allprojects {
+
+    ext {
+        set('SpringBootVersion', '2.7.6')
+        set('ManagementVersion', '1.1.0')
+        //set('SpringBootVersion', '3.4.3')
+        //set('ManagementVersion', '1.1.3')
+    }
+}

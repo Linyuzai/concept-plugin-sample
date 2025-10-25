@@ -9,6 +9,9 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+  mvc:
+    pathmatch:
+      matching-strategy: path_pattern_parser
 concept:
   plugin:
     metadata:
