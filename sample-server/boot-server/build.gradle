@@ -1,0 +1,33 @@
+group = 'com.github.linyuzai'
+version = '1.0'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    //implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    implementation project(path: ':plugin-common:plugin-common-api', configuration: 'default')
+    implementation project(path: ':plugin-nested:plugin-nested-api', configuration: 'default')
+    implementation project(path: ':plugin-extract:plugin-extract-api', configuration: 'default')
+    implementation project(path: ':plugin-observable:plugin-observable-api', configuration: 'default')
+
+    implementation "com.amazonaws:aws-java-sdk-s3:1.12.783"
+    implementation "software.amazon.awssdk:s3:2.31.33"
+    implementation "software.amazon.awssdk:apache-client:2.31.33"
+    implementation "io.minio:minio:8.5.10"
+
+    //implementation "com.github.linyuzai:concept-plugin-core:3.0.0"
+    //implementation "com.github.linyuzai:concept-plugin-jar:3.0.0"
+    //implementation "com.github.linyuzai:concept-plugin-remote:3.0.0"
+    implementation "com.github.linyuzai:concept-plugin-spring-boot-starter:3.0.0"
+
+    /*var path = '~/IdeaProjects/Github/x/concept/concept-plugin'
+    implementation files("${path}/concept-plugin-core/build/libs/concept-plugin-core-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-jar/build/libs/concept-plugin-jar-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-remote/build/libs/concept-plugin-remote-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-spring-boot-starter/build/libs/concept-plugin-spring-boot-starter-${ConceptPluginVersion}.jar")
+
+    implementation "org.webjars:vue:2.6.11"
+    implementation "org.webjars.npm:axios:1.7.2"
+    implementation "org.webjars.npm:element-ui:2.15.1"
+    implementation "org.webjars.npm:showdown:2.1.0"*/
+}

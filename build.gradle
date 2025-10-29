@@ -16,8 +16,13 @@ dependencies {
 allprojects {
 
     ext {
+        set('ConceptPluginVersion', '3.0.0')
+
+        set('SpringCloudVersion', '2021.0.4')
         set('SpringBootVersion', '2.7.6')
         set('ManagementVersion', '1.1.0')
+
+        //set('SpringCloudVersion', '2022.0.4')
         //set('SpringBootVersion', '3.4.3')
         //set('ManagementVersion', '1.1.3')
     }

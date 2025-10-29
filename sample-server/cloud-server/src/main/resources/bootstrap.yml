@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: concept-plugin-sample
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka
+concept:
+  plugin:
+    storage:
+      type: aws_v2
+      location: concept-plugin-sample-cloud-aws2
+    management:
+      header:
+        title:
+          text: 多实例远程插件aws2

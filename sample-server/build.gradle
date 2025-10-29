@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version "${SpringBootVersion}"
+    id 'io.spring.dependency-management' version "${ManagementVersion}"
+    //id 'org.jetbrains.kotlin.jvm' version '1.8.0' //1.6.10
+    //id 'org.jetbrains.dokka' version '1.6.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+//应用于所有子模块
+subprojects {
+
+    //应用插件
+    apply plugin: 'java-library'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    //仓库地址
+    repositories {
+        mavenCentral()
+    }
+
+    //依赖
+    dependencies {
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
+
+    //依赖管理
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${SpringCloudVersion}"
+            //mavenBom 'com.alibaba.cloud:spring-cloud-alibaba-dependencies:2021.1'
+        }
+    }
+}

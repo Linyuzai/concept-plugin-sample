@@ -1,0 +1,26 @@
+group = 'com.github.linyuzai'
+version = '1.0'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.springframework.cloud:spring-cloud-loadbalancer'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    implementation "software.amazon.awssdk:s3:2.31.33"
+    implementation "software.amazon.awssdk:apache-client:2.31.33"
+
+    implementation "com.github.linyuzai:concept-plugin-spring-boot-starter:3.0.0"
+
+    /*var path = '~/IdeaProjects/Github/x/concept/concept-plugin'
+    implementation files("${path}/concept-plugin-core/build/libs/concept-plugin-core-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-jar/build/libs/concept-plugin-jar-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-remote/build/libs/concept-plugin-remote-${ConceptPluginVersion}.jar")
+    implementation files("${path}/concept-plugin-spring-boot-starter/build/libs/concept-plugin-spring-boot-starter-${ConceptPluginVersion}.jar")
+
+    implementation "org.webjars:vue:2.6.11"
+    implementation "org.webjars.npm:axios:1.7.2"
+    implementation "org.webjars.npm:element-ui:2.15.1"
+    implementation "org.webjars.npm:showdown:2.1.0"*/
+}
