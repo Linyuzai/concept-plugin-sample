@@ -1,5 +1,6 @@
 package com.github.linyuzai.concept.plugin.sample.server.nested;
 
+import com.github.linyuzai.concept.plugin.sample.nested.NestedApi;
 import com.github.linyuzai.concept.plugin.sample.server.Utils;
 import com.github.linyuzai.plugin.autoconfigure.bean.BeanExtractor;
 import com.github.linyuzai.plugin.core.context.PluginContext;
