@@ -11,7 +11,7 @@ public class AIConfig {
 
     @Bean
     public PluginObservable<String, AI> aiPluginObservable() {
-        return new GenericPluginObservable<>() {
+        return new GenericPluginObservable<String, AI>() {
             @Override
             public String grouping(AI plugin, PluginContext context) {
                 return plugin.getName();

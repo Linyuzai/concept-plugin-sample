@@ -16,20 +16,25 @@ concept:
   plugin:
     metadata:
       standard-type: com.github.linyuzai.plugin.jar.concept.JarPlugin.StandardMetadata
-    autoload:
-      enabled: true
-      period: 5000
-    storage:
-      type: memory
-      filter-suffixes: .zip,.jar
     validation:
       max-nested-depth: 5
       max-read-size: 2MB
+    storage:
+      type: memory
+      location: data
+      filter-suffixes: .zip,.jar
+    autoload:
+      enabled: true
+      period: 5000
+    logger:
+      standard:
+        enabled: true
     extension:
       request-mapping:
         enabled: true
     management:
       enabled: true
+      locale: zh_CN
       authorization:
         password: 123456
       github-corner:
