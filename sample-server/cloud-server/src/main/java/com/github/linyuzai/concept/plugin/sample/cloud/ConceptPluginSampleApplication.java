@@ -1,4 +1,4 @@
-package com.github.linyuzai.concept.plugin.sample;
+package com.github.linyuzai.concept.plugin.sample.cloud;
 
 import com.github.linyuzai.plugin.autoconfigure.EnablePluginConcept;
 import org.springframework.boot.SpringApplication;

@@ -85,3 +85,36 @@ concept.plugin.dependency.names=cycle2
 
 插件对象不会注入到Spring容器
 
+## plugin-extract-class
+
+> 提取Class
+
+## plugin-extract-content
+
+> 提取内容
+
+可用String，byte[]，InputStream等接收
+
+## plugin-extract-properties
+
+> 提取properties
+
+## plugin-extract-yaml
+
+> 提取yaml和yml
+
+## plugin-extract-dynamic
+
+> 使用@OnPluginExtract提取插件
+
+## plugin-observable-generic
+
+> 使用PluginObservable提取插件
+
+自动感知并处理插件加载卸载
+
+## plugin-observable-web
+
+> 动态Spring接口
+
+启用配置即可

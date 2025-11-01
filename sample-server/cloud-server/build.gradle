@@ -8,6 +8,11 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 
+    implementation project(path: ':plugin-common:plugin-common-api', configuration: 'default')
+    implementation project(path: ':plugin-nested:plugin-nested-api', configuration: 'default')
+    implementation project(path: ':plugin-extract:plugin-extract-api', configuration: 'default')
+    implementation project(path: ':plugin-observable:plugin-observable-api', configuration: 'default')
+
     implementation "software.amazon.awssdk:s3:2.31.33"
     implementation "software.amazon.awssdk:apache-client:2.31.33"
 

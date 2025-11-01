@@ -1,4 +1,4 @@
-package com.github.linyuzai.concept.plugin.sample;
+package com.github.linyuzai.concept.plugin.sample.cloud;
 
 import org.slf4j.Logger;
 
